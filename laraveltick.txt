@@ -1,0 +1,18 @@
+
+$table->tinyInteger('active_status')->default('1');
+php artisan make:seeder CategorySeeder
+
+
+use Illuminate\Support\Str;
+
+php artisan db:seed --class=CategorySeeder
+
+$table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
+php artisan migrate:refresh --path=/database/migrations/2023_06_25_084206_create_categories_table.php
+
+
+User::all()->random()->id
+
+$slug = Str::slug($title)
+
+
